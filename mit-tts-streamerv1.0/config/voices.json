@@ -1,0 +1,104 @@
+{
+  "voices": {
+    "es": {
+      "name": "Spanish",
+      "speakers": [
+        {
+          "id": 0,
+          "name": "ES-Female-1",
+          "gender": "female",
+          "description": "Voz femenina española estándar",
+          "sample_rate": 22050,
+          "quality": "high"
+        },
+        {
+          "id": 1,
+          "name": "ES-Male-1",
+          "gender": "male",
+          "description": "Voz masculina española estándar",
+          "sample_rate": 22050,
+          "quality": "high"
+        }
+      ]
+    },
+    "en": {
+      "name": "English",
+      "speakers": [
+        {
+          "id": 0,
+          "name": "EN-Female-1",
+          "gender": "female",
+          "description": "Standard English female voice",
+          "sample_rate": 22050,
+          "quality": "high"
+        },
+        {
+          "id": 1,
+          "name": "EN-Male-1",
+          "gender": "male",
+          "description": "Standard English male voice",
+          "sample_rate": 22050,
+          "quality": "high"
+        }
+      ]
+    },
+    "fr": {
+      "name": "French",
+      "speakers": [
+        {
+          "id": 0,
+          "name": "FR-Female-1",
+          "gender": "female",
+          "description": "Voix féminine française standard",
+          "sample_rate": 22050,
+          "quality": "high"
+        }
+      ]
+    },
+    "zh": {
+      "name": "Chinese",
+      "speakers": [
+        {
+          "id": 0,
+          "name": "ZH-Female-1",
+          "gender": "female",
+          "description": "标准中文女声",
+          "sample_rate": 22050,
+          "quality": "high"
+        }
+      ]
+    },
+    "jp": {
+      "name": "Japanese",
+      "speakers": [
+        {
+          "id": 0,
+          "name": "JP-Female-1",
+          "gender": "female",
+          "description": "標準的な日本語女性の声",
+          "sample_rate": 22050,
+          "quality": "high"
+        }
+      ]
+    },
+    "kr": {
+      "name": "Korean",
+      "speakers": [
+        {
+          "id": 0,
+          "name": "KR-Female-1",
+          "gender": "female",
+          "description": "표준 한국어 여성 목소리",
+          "sample_rate": 22050,
+          "quality": "high"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2025-01-01",
+    "total_voices": 8,
+    "supported_languages": 6
+  }
+}

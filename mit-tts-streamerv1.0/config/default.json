@@ -1,0 +1,119 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "http_port": 8080,
+    "websocket_port": 8081,
+    "max_connections": 100,
+    "timeout": 30,
+    "cors_origins": ["*"],
+    "cors_methods": ["GET", "POST", "PUT", "DELETE"],
+    "cors_headers": ["*"]
+  },
+  "tts": {
+    "engine": "melo",
+    "device": "cpu",
+    "default_language": "es",
+    "default_voice_id": 0,
+    "default_speed": 1.0,
+    "chunk_size": 1024,
+    "sample_rate": 22050,
+    "supported_languages": ["es", "en", "fr", "zh", "jp", "kr"],
+    "preload_languages": ["es", "en"],
+    "engines": {
+      "melo": {
+        "enabled": true,
+        "priority": 1,
+        "device": "auto",
+        "model_cache_dir": "./models/melo",
+        "preload_languages": ["es", "en", "fr"],
+        "chunk_duration_ms": 200,
+        "config": {
+          "use_gpu": true,
+          "optimize_memory": true,
+          "batch_size": 1
+        }
+      }
+    },
+    "manager": {
+      "health_check_interval": 60,
+      "max_error_count": 5,
+      "fallback_enabled": true,
+      "load_balancing": "priority"
+    }
+  },
+  "audio": {
+    "default_format": "wav",
+    "supported_formats": ["wav", "mp3", "ogg", "flac"],
+    "buffer_size": 4096,
+    "streaming_chunk_size": 512,
+    "quality": "high",
+    "compression_level": 6
+  },
+  "performance": {
+    "max_queue_size": 1000,
+    "worker_processes": 4,
+    "preload_models": true,
+    "cache_size": 100,
+    "cache_ttl": 3600,
+    "max_text_length": 5000,
+    "chunk_timeout": 5.0,
+    "synthesis_timeout": 30.0
+  },
+  "priorities": {
+    "critical": {
+      "level": 0,
+      "interrupt_others": true,
+      "max_queue_time": 0.1
+    },
+    "high": {
+      "level": 1,
+      "interrupt_others": true,
+      "max_queue_time": 1.0
+    },
+    "normal": {
+      "level": 2,
+      "interrupt_others": false,
+      "max_queue_time": 10.0
+    }
+  },
+  "session": {
+    "default_timeout": 300,
+    "cleanup_interval": 60,
+    "max_sessions_per_ip": 10,
+    "session_id_length": 32
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "logs/mit-tts-streamer.log",
+    "max_size": "10MB",
+    "backup_count": 5,
+    "console": true,
+    "json_format": false,
+    "log_requests": true,
+    "log_performance": true
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics_endpoint": "/api/v1/metrics",
+    "health_endpoint": "/api/v1/health",
+    "prometheus_enabled": false,
+    "prometheus_port": 9090
+  },
+  "security": {
+    "api_key_required": false,
+    "api_key_header": "X-API-Key",
+    "rate_limiting": {
+      "enabled": true,
+      "requests_per_minute": 100,
+      "burst_size": 20
+    },
+    "max_request_size": "10MB"
+  },
+  "development": {
+    "debug": false,
+    "reload": false,
+    "profiling": false,
+    "mock_tts": false
+  }
+}

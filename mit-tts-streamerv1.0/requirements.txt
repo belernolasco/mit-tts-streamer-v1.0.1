@@ -1,0 +1,38 @@
+# Core dependencies (esenciales)
+pydantic==2.5.0
+click==8.1.7
+rich==13.7.0
+python-json-logger==2.0.7
+
+# Web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+websockets==12.0
+python-multipart==0.0.6
+
+# Async and concurrency
+aiofiles==23.2.1
+
+# Audio processing básico
+numpy==1.24.3
+soundfile==0.12.1
+
+# Optional audio format support
+pydub==0.25.1
+
+# Development dependencies (optional)
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Production dependencies (optional)
+gunicorn==21.2.0
+
+# Note: TTS engines will be installed separately based on user preference
+# Examples:
+# - For MeloTTS: pip install git+https://github.com/myshell-ai/MeloTTS.git
+# - For piper-tts: pip install piper-tts
+# - For espeak: sudo apt-get install espeak espeak-data

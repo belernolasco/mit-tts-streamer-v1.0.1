@@ -1,0 +1,22 @@
+# Dependencias mínimas para MIT-TTS-Streamer (modo demo)
+# Estas dependencias están garantizadas en PyPI
+
+# Core dependencies (esenciales)
+pydantic==2.5.0
+click==8.1.7
+rich==13.7.0
+python-json-logger==2.0.7
+
+# Async support
+asyncio-mqtt==0.16.1
+
+# Audio processing básico
+numpy==1.24.3
+soundfile==0.12.1
+
+# Web framework (opcional para demo)
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+websockets==12.0
+python-multipart==0.0.6
+aiofiles==23.2.1

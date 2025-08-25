@@ -1,0 +1,63 @@
+{
+    "server": {
+        "name": "MIT-TTS-Streamer",
+        "environment": "development",
+        "http": {
+            "host": "0.0.0.0",
+            "port": 8000
+        },
+        "websocket": {
+            "host": "0.0.0.0",
+            "port": 8001
+        }
+    },
+    "tts": {
+        "default_engine": "melo",
+        "default_voice": "EN-US",
+        "default_language": "EN",
+        "audio": {
+            "sample_rate": 22050,
+            "format": "wav",
+            "quality": "medium"
+        }
+    },
+    "performance": {
+        "max_concurrent_sessions": 100,
+        "session_timeout": 300,
+        "queue_timeout": 30,
+        "max_queue_size": 1000,
+        "worker_threads": 4,
+        "cache_size_mb": 512,
+        "enable_caching": true,
+        "enable_compression": true
+    },
+    "security": {
+        "enable_cors": true,
+        "cors_origins": ["AUTHORS.md backups black.toml cache config data docker-compose.yml docker.env Dockerfile docs examples INSTALL-FIXED.md INSTALL.md install.sh LICENSE logs MIT-TTS-Streamer Inf.odt models pytest.ini quick-start.md README.md requirements-minimal.txt requirements-test.txt requirements-tts.txt requirements.txt run.py scripts setup.py src tests test_server.py voices"],
+        "rate_limit": 60,
+        "max_request_size_mb": 10,
+        "enable_api_key_auth": false,
+        "enable_ip_rate_limiting": true,
+        "max_sessions_per_ip": 10
+    },
+    "ssl": {
+        "enabled": false,
+        "cert_path": "",
+        "key_path": "",
+        "ca_path": ""
+    },
+    "database": {
+        "type": "sqlite",
+        "url": "./data/mit-tts-streamer.db"
+    },
+    "monitoring": {
+        "enabled": true,
+        "metrics_endpoint": "/metrics",
+        "health_endpoint": "/health"
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "json",
+        "file": "./logs/mit-tts-streamer.log"
+    }
+}
